@@ -1,75 +1,88 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
+
 html {
     box-sizing: border-box;
-  }
-  *, *:before, *:after {
+}
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-  }
+}
 
-  /* Globales */
 
-  a{
+/* Globales */
+
+a {
     text-decoration: none;
     color: black;
-  }
+}
 
-.contenedor{
+.contenedor {
     max-width: 1200px;
     margin-inline: 0 auto;
+}
 
-  }
+img {
+    max-width: 100%;
+    display: block;
+}
 
-  /***Header navegacion**/
 
-.nombre-sitio{
+/***Header navegacion**/
+
+.nombre-sitio {
     margin: 50px;
     margin-bottom: 50px;
     text-align: center;
 }
 
-.nombre-sitio span{
+.nombre-sitio span {
     color: #037bc0;
 }
 
-.contenedor-navegacion{
+.contenedor-navegacion {
     border-top: 1px solid #e1e1e1;
 }
- 
 
-.nav-principal{
-
-  padding: 20px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left: 60px;
-
+.nav-principal {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 60px;
 }
 
-.hero{
+.hero {
     background-image: url(../img/categoria2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
 }
+
+
 /**Categorias**/
 
-.listado-categorias{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 100px;
-
+.categorias h2 {
+    text-align: center;
 }
 
+.categoria a {
+    text-align: center;
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+}
 
+.categoria a:hover {
+    background-color: #037bc0;
+    color: #fff;
+    border-bottom-right-radius: 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
+.listado-categorias {
+    margin-left: 300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
